@@ -1,10 +1,10 @@
-<h1>All burgers</h1>
+<h1>BURGER BITER BOT 5000</h1>
 
 <h2>Burgers to Eat</h2>
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    <li>{{burger_name}}</li>
+    <li><button class="eat-button" data-id={{id}}>Eat</button> #{{id}}: {{burger_name}}</li>
     {{/unless}}
     {{/each}}
 </ul>
@@ -13,7 +13,13 @@
 <ul>
     {{#each burgers}}
     {{#if devoured}}
-    <li>{{burger_name}}</li>
+    <li>#{{id}}: {{burger_name}}</li>
     {{/if}}
     {{/each}}
 </ul>
+
+<h2>Add Burger</h2>
+<form action="" method="">
+    <input type="textbox" id="addBurgerName">
+    <input type="submit" id="addBurgerBtn" value="Add Burger">
+</form>
