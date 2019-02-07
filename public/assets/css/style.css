@@ -1,0 +1,151 @@
+body {
+  width: 1040px;
+  /* height: 100vh; */
+  margin: 0 auto;
+  font-family: "Dosis", sans-serif;
+  background: linear-gradient(to bottom, #d2ff52 0%, #91e842 100%) fixed;
+}
+.menu {
+  height: 160px;
+  width: 31%;
+  margin: 0 5px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.219);
+  float: left;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.uneaten-div,
+.eaten-div {
+  width: 50%;
+  float: left;
+}
+
+.add-div {
+}
+.modify-div {
+  background: rgba(126, 89, 10, 0.329);
+}
+.delete-div {
+  background: rgba(160, 17, 17, 0.342);
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 3px 3px #fcfbed, -3px 3px #fcfbed, -3px -3px white,
+    3px -3px #fcfbed;
+}
+
+h2 {
+  text-align: center;
+}
+
+.list-heading {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  position: relative;
+  top: 110px;
+  left: 10px;
+  margin: 0;
+  text-shadow: 2px 2px #fcfbed, -2px 2px #fcfbed, -2px -2px white,
+    2px -2px #fcfbed;
+}
+
+.burger-img {
+  width: 180px;
+  height: auto;
+  margin-left: 35%;
+}
+li.burgers {
+  padding: 5px 0px;
+  font-size: 18px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px #333333;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.226);
+}
+ul.burgers-ul {
+  background: #0000001a;
+  border-radius: 6px;
+  height: 260px;
+  margin: 10px;
+  overflow: auto;
+  box-shadow: 2px 2px 4px #0000006e;
+}
+ul.menu-ul {
+  height: 80px;
+  background: #0000002d;
+  overflow: auto;
+}
+.menu-li:hover {
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid rgba(39, 39, 39, 0.75);
+  font-family: "Dosis", sans-serif;
+  background: rgb(255, 159, 83);
+  border-radius: 3px;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.253) -2px -2px 0px -1px inset;
+}
+
+input[type="submit"] {
+  border: 1px solid rgba(39, 39, 39, 0.75);
+  background: rgb(255, 159, 83);
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.253) -4px -4px 0px -1px inset;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(175, 102, 42);
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Dosis", sans-serif;
+}
+input[type="textbox"] {
+  width: 298px;
+}
+#modifyBurgerName {
+  width: 222px;
+  padding: 6px;
+}
+#modifyBurgerBtn {
+  width: 74px;
+  padding: 2px;
+}
+
+/* SCROLLBAR  */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dbf8ab;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c9930;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #446419;
+}

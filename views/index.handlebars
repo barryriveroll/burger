@@ -1,25 +1,46 @@
-<h1>BURGER BITER BOT 5000</h1>
+<h1>Burger Biter</h1>
+{{!-- <p>See a burger you like? Click the "Eat" button to eat it! It will be removed from the "Burgers To Eat" list and
+    moved
+    to the "Burgers Eaten" list. Or, add a new burger with the text field and "Add Burger" button!</p> --}}
+<div class="menu add-div">
+    <form action="" method="">
+        <input type="textbox" placeholder="Enter new burger..." id="addBurgerName">
+        <input type="submit" id="addBurgerBtn" value="Add Burger">
+    </form>
+</div>
+<div class="menu modify-div">
+    <ul class="menu-ul">
+        {{#each burgers}}
+        <li class="menu-li" data-id={{id}} data-name="{{burger_name}}">#{{id}}: {{burger_name}}</li>
+        {{/each}}
+    </ul>
+    <form action="">
+        <input type="textbox" placeholder="" id="modifyBurgerName">
+        <input type="submit" data-id="" id="modifyBurgerBtn" value="Change">
+    </form>
+</div>
+<div class="menu delete-div">
 
-<h2>Burgers to Eat</h2>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li><button class="eat-button" data-id={{id}}>Eat</button> #{{id}}: {{burger_name}}</li>
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers Eaten</h2>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>#{{id}}: {{burger_name}}</li>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add Burger</h2>
-<form action="" method="">
-    <input type="textbox" id="addBurgerName">
-    <input type="submit" id="addBurgerBtn" value="Add Burger">
-</form>
+</div>
+<div class="uneaten-div">
+    <h2 class="list-heading">Burgers to Eat</h2>
+    <img src="/assets/img/burger1.png" class="burger-img">
+    <ul class="burgers-ul">
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li class="burgers"><button class="eat-button" data-id={{id}}>Eat!</button> #{{id}}: {{burger_name}}</li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>
+<div class="eaten-div">
+    <h2 class="list-heading">Burgers Eaten</h2>
+    <img src="/assets/img/burger2.png" class="burger-img">
+    <ul class="burgers-ul">
+        {{#each burgers}}
+        {{#if devoured}}
+        <li class="burgers">#{{id}}: {{burger_name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>

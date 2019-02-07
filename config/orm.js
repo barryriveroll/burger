@@ -23,9 +23,16 @@ var orm = {
   },
   updateOne: function(table, columns, condition, cb) {
     var queryString = "UPDATE " + table;
-    queryString += " SET devoured = " + columns.devoured;
+
+    if (columns.burger_name) {
+      queryString += " SET burger_name = '" + columns.burger_name + "'";
+    } else {
+      queryString += " SET devoured = " + columns.devoured;
+    }
     queryString += " WHERE ";
     queryString += condition;
+
+    console.log(queryString);
 
     connection.query(queryString, function(err, result) {
       if (err) {

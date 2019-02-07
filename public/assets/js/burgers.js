@@ -29,4 +29,26 @@ $(document).ready(function() {
       location.reload();
     });
   });
+
+  $(".menu-li").click(function() {
+    var name = $(this).attr("data-name");
+    var id = $(this).attr("data-id");
+    $("#modifyBurgerName").val(name);
+    $("#modifyBurgerBtn").attr("data-id", id);
+  });
+
+  $("#modifyBurgerBtn").click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr("data-id");
+    var newName = {
+      burger_name: $("#modifyBurgerName").val()
+    };
+
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: newName
+    }).then(function() {
+      location.reload();
+    });
+  });
 });

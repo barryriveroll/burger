@@ -25,20 +25,25 @@ router.post("/api/burgers", function(req, res) {
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-
-  burger.updateDevoured(
-    {
+  if (req.body.devoured) {
+    var objectToSend = {
       devoured: req.body.devoured
-    },
-    condition,
-    function(result) {
-      if (result.changedRows == 0) {
-        return res.status(404).end();
-      } else {
-        res.status(200).end();
-      }
+    };
+  } else {
+    var objectToSend = {
+      burger_name: req.body.burger_name
+    };
+
+    console.log(objectToSend.burger_name);
+  }
+
+  burger.updateDevoured(objectToSend, condition, function(result) {
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
     }
-  );
+  });
 });
 
 module.exports = router;
