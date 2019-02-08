@@ -3,12 +3,14 @@
     moved
     to the "Burgers Eaten" list. Or, add a new burger with the text field and "Add Burger" button!</p> --}}
 <div class="menu add-div">
+    <h3>Add Burger</h3>
     <form action="" method="">
         <input type="textbox" placeholder="Enter new burger..." id="addBurgerName">
         <input type="submit" id="addBurgerBtn" value="Add Burger">
     </form>
 </div>
 <div class="menu modify-div">
+    <h3>Modify Burger</h3>
     <ul class="menu-ul">
         {{#each burgers}}
         <li class="menu-li" data-id={{id}} data-name="{{burger_name}}">#{{id}}: {{burger_name}}</li>
@@ -20,7 +22,16 @@
     </form>
 </div>
 <div class="menu delete-div">
-
+    <h3>Delete Burger</h3>
+    <ul class="menu-ul">
+        {{#each burgers}}
+        <li class="delete-li" data-id={{id}} data-name="{{burger_name}}">#{{id}}: {{burger_name}}</li>
+        {{/each}}
+    </ul>
+    <form action="">
+        <p id="deleteBurgerName">Burger to delete...</p>
+        <input type="submit" data-id="" id="deleteBurgerBtn" value="Delete">
+    </form>
 </div>
 <div class="uneaten-div">
     <h2 class="list-heading">Burgers to Eat</h2>

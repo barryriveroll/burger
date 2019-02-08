@@ -14,15 +14,31 @@ body {
   float: left;
   border-radius: 5px;
   padding: 7px;
+  box-shadow: 2px 2px 4px #0000006e;
 }
-
+h3 {
+  width: 176px;
+  position: absolute;
+  top: 170px;
+  font-size: 22px;
+  font-family: lobster;
+}
 .uneaten-div,
 .eaten-div {
   width: 50%;
   float: left;
 }
+#addBurgerName {
+  margin-top: 15px;
+}
+#addBurgerBtn {
+  top: 7px;
+  right: -56%;
+  position: relative;
+}
 
 .add-div {
+  padding-top: 6px;
 }
 .modify-div {
   background: rgba(126, 89, 10, 0.329);
@@ -83,7 +99,8 @@ ul.menu-ul {
   background: #0000002d;
   overflow: auto;
 }
-.menu-li:hover {
+.menu-li:hover,
+.delete-li:hover {
   cursor: pointer;
 }
 
@@ -120,13 +137,20 @@ input {
 input[type="textbox"] {
   width: 298px;
 }
-#modifyBurgerName {
+#modifyBurgerName,
+#deleteBurgerName {
   width: 222px;
   padding: 6px;
 }
-#modifyBurgerBtn {
+#modifyBurgerBtn,
+#deleteBurgerBtn {
   width: 74px;
   padding: 2px;
+}
+
+#deleteBurgerName {
+  float: left;
+  margin: 0px;
 }
 
 /* SCROLLBAR  */
